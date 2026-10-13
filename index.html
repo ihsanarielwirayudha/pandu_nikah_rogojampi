@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PANDU NIKAH - KUA Kecamatan Rogojampi</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <style>
+    body { 
+      font-family: 'Plus Jakarta Sans', sans-serif; 
+      background-color: #091312;
+      color: #f1f5f9;
+    }
+
+    /* GLASS 3D HD TANPA BLUR HITAM (TAJAM & BENING) */
+    .glass-card {
+      background: linear-gradient(135deg, rgba(20, 35, 33, 0.85), rgba(12, 24, 22, 0.95));
+      border: 1px solid rgba(52, 211, 153, 0.25);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      will-change: transform;
+      backface-visibility: hidden;
+    }
+
+    /* HOVER 3D SHARP & HD */
+    .card-3d {
+      transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .card-3d:hover {
+      transform: translateY(-5px);
+      border-color: rgba(52, 211, 153, 0.6);
+      box-shadow: 0 18px 35px rgba(16, 185, 129, 0.25);
+    }
+
+    /* GLOW BACKGROUND EFFORTLESS */
+    .ambient-glow {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(120px);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .btn-action {
+      transition: all 0.2s ease;
+      box-shadow: 0 8px 20px rgba(16, 185, 129, 0.35);
+    }
+
+    .btn-action:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 25px rgba(16, 185, 129, 0.5);
+    }
+
+    .btn-action:active {
+      transform: translateY(1px);
+    }
+  </style>
+</head>
+<body class="antialiased overflow-x-hidden selection:bg-emerald-500 selection:text-slate-950">
+
+  <!-- LIGHTING AMBIENT BACKGROUND -->
+  <div class="ambient-glow w-96 h-96 bg-emerald-600/20 top-0 left-1/4"></div>
+  <div class="ambient-glow w-96 h-96 bg-teal-500/15 top-1/2 -right-20"></div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="sticky top-0 z-50 px-4 py-3">
+    <div class="max-w-5xl mx-auto glass-card rounded-2xl px-4 sm:px-6 py-3 flex justify-between items-center backdrop-blur-md">
+      <div class="flex items-center space-x-3">
+        
+        <!-- LOGO KEMENAG EMBEDDED (SVG 100% PASTI MUNCUL & HD) -->
+        <div class="w-10 h-10 flex-shrink-0 drop-shadow-[0_0_10px_rgba(52,211,153,0.6)]">
+          <svg viewBox="0 0 200 200" class="w-full h-full">
+            <polygon points="100,10 185,60 185,150 100,195 15,150 15,60" fill="#047857" stroke="#facc15" stroke-width="6"/>
+            <polygon points="100,20 175,65 175,145 100,185 25,145 25,65" fill="#065f46" />
+            <!-- Star -->
+            <polygon points="100,32 104,44 117,44 107,52 110,64 100,56 90,64 93,52 83,44 96,44" fill="#facc15"/>
+            <!-- Book / Quran -->
+            <path d="M 70 95 L 100 80 L 130 95 L 130 115 L 100 100 L 70 115 Z" fill="#facc15" stroke="#ffffff" stroke-width="2"/>
+            <path d="M 100 80 L 100 100" stroke="#047857" stroke-width="3"/>
+            <!-- Rehal / Stand -->
+            <path d="M 75 112 L 125 135 M 125 112 L 75 135" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+            <!-- Padi & Kapas Ring -->
+            <path d="M 45 130 A 55 55 0 0 1 50 65" fill="none" stroke="#ffffff" stroke-width="5" stroke-dasharray="4 4"/>
+            <path d="M 155 130 A 55 55 0 0 0 150 65" fill="none" stroke="#facc15" stroke-width="5"/>
+            <!-- Banner Ribbon -->
+            <path d="M 45 150 Q 100 170 155 150 L 150 162 Q 100 180 50 162 Z" fill="#ffffff" stroke="#1e293b" stroke-width="1.5"/>
+            <text x="100" y="161" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="9" fill="#0f172a" text-anchor="middle" letter-spacing="0.5">IKHLAS BERAMAL</text>
+          </svg>
+        </div>
+
+        <div>
+          <h1 class="text-sm sm:text-base font-black tracking-wider text-white">PANDU NIKAH</h1>
+          <p class="text-[10px] sm:text-xs font-bold text-emerald-400">KUA Kecamatan Rogojampi</p>
+        </div>
+      </div>
+
+      <a href="#kalkulator" class="btn-action bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-black text-xs px-4 py-2.5 rounded-xl">
+        Cek Biaya
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative pt-10 pb-16 px-4 text-center z-10">
+    <div class="max-w-3xl mx-auto space-y-6">
+      <div class="inline-flex items-center space-x-2 glass-card px-4 py-1.5 rounded-full text-xs font-bold text-emerald-300">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+        <span>Portal Digital Layanan Pranikah KUA Rogojampi</span>
+      </div>
+
+      <h2 class="text-3xl sm:text-5xl font-black tracking-tight leading-tight text-white drop-shadow-md">
+        Panduan Transparan & Digital Nikah KUA Rogojampi
+      </h2>
+
+      <p class="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto leading-relaxed">
+        Hitung biaya nikah resmi (PNBP), simulasi checklist berkas, alur pendaftaran akad, pendaftaran data catin online, dan lokasi KUA Rogojampi.
+      </p>
+
+      <div class="pt-2 flex flex-wrap justify-center gap-3">
+        <a href="#alur" class="btn-action bg-white hover:bg-slate-100 text-slate-950 font-black text-xs px-5 py-3 rounded-xl">
+          🗺️ Alur Nikah
+        </a>
+        <a href="#form-catin" class="btn-action bg-emerald-600 hover:bg-emerald-500 text-white font-black text-xs px-5 py-3 rounded-xl">
+          📝 Daftar Data Catin
+        </a>
+        <a href="#lokasi" class="glass-card hover:border-emerald-400 text-emerald-300 font-bold text-xs px-5 py-3 rounded-xl">
+          📍 Lokasi & Jam Kerja
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="max-w-4xl mx-auto px-4 relative z-20 space-y-10 pb-20">
+
+    <!-- 1. ALUR PENDAFTARAN NIKAH (MODUL STEP-BY-STEP) -->
+    <section id="alur" class="glass-card rounded-3xl p-6 sm:p-8 card-3d">
+      <div class="flex items-center space-x-3 mb-6">
+        <div class="w-11 h-11 bg-emerald-500/20 border border-emerald-500/40 rounded-2xl flex items-center justify-center text-xl">
+          📌
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-white">Alur Pendaftaran Nikah (Awal s/d Akad)</h3>
+          <p class="text-xs text-slate-400">5 Tahapan mudah mengurus pernikahan resmi di KUA Rogojampi</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-5 gap-3 text-center">
+        <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <span class="w-7 h-7 mx-auto bg-emerald-500 text-slate-950 font-black rounded-full flex items-center justify-center text-xs">1</span>
+          <h4 class="text-xs font-bold text-white">Surat RT/RW & Desa</h4>
+          <p class="text-[10px] text-slate-400">Urus surat pengantar nikah (N1-N4) di kantor desa/kelurahan.</p>
+        </div>
+        <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <span class="w-7 h-7 mx-auto bg-emerald-500 text-slate-950 font-black rounded-full flex items-center justify-center text-xs">2</span>
+          <h4 class="text-xs font-bold text-white">Pemeriksaan Puskesmas</h4>
+          <p class="text-[10px] text-slate-400">Cek kesehatan Catin & suntik TT untuk dapat sertifikat Elsimil.</p>
+        </div>
+        <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <span class="w-7 h-7 mx-auto bg-emerald-500 text-slate-950 font-black rounded-full flex items-center justify-center text-xs">3</span>
+          <h4 class="text-xs font-bold text-white">Daftar ke KUA</h4>
+          <p class="text-[10px] text-slate-400">Bawa dokumen ke KUA Rogojampi / daftar via SIMKAH online.</p>
+        </div>
+        <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <span class="w-7 h-7 mx-auto bg-emerald-500 text-slate-950 font-black rounded-full flex items-center justify-center text-xs">4</span>
+          <h4 class="text-xs font-bold text-white">Bimbingan Catin</h4>
+          <p class="text-[10px] text-slate-400">Ikuti Bimbingan Perkawinan (Bimwin) mandiri di KUA.</p>
+        </div>
+        <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <span class="w-7 h-7 mx-auto bg-emerald-500 text-slate-950 font-black rounded-full flex items-center justify-center text-xs">5</span>
+          <h4 class="text-xs font-bold text-white">Pelaksanaan Akad</h4>
+          <p class="text-[10px] text-slate-400">Akad nikah dilaksanakan & Buku Nikah langsung terbit.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. KALKULATOR BIAYA NIKAH -->
+    <section id="kalkulator" class="glass-card rounded-3xl p-6 sm:p-8 card-3d">
+      <div class="flex items-center space-x-3 mb-6">
+        <div class="w-11 h-11 bg-emerald-500/20 border border-emerald-500/40 rounded-2xl flex items-center justify-center text-xl">
+          💰
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-white">Kalkulator Simulasi Biaya Nikah (PNBP)</h3>
+          <p class="text-xs text-slate-400">Transparansi tarif resmi Peraturan Pemerintah No. 59 Tahun 2018</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+        <button onclick="hitungBiaya('kua')" id="btnKua" class="p-5 rounded-2xl bg-emerald-500/20 border-2 border-emerald-400 text-left transition-all">
+          <div class="flex justify-between items-center">
+            <span class="font-bold text-sm text-emerald-300">Di Balai Nikah KUA</span>
+            <span class="text-[10px] font-black bg-emerald-400 text-slate-950 px-2.5 py-1 rounded-md uppercase">Rp 0 (Gratis)</span>
+          </div>
+          <p class="text-xs text-slate-300 mt-2">Pelaksanaan di Balai Nikah KUA Rogojampi pada hari & jam kerja operasional.</p>
+        </button>
+
+        <button onclick="hitungBiaya('bedhol')" id="btnBedhol" class="p-5 rounded-2xl bg-slate-900/80 border-2 border-slate-700 hover:border-emerald-500/50 text-left transition-all">
+          <div class="flex justify-between items-center">
+            <span class="font-bold text-sm text-slate-200">Luar KUA / Kediaman</span>
+            <span class="text-[10px] font-black bg-amber-400 text-slate-950 px-2.5 py-1 rounded-md uppercase">Rp 600.000</span>
+          </div>
+          <p class="text-xs text-slate-400 mt-2">Pelaksanaan di rumah, gedung, atau di luar jam kerja operasional KUA.</p>
+        </button>
+      </div>
+
+      <!-- Hasil Biaya -->
+      <div class="p-5 rounded-2xl bg-slate-950 border border-emerald-500/40 space-y-2">
+        <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+          <span class="text-xs text-slate-400">Estimasi Setor ke Kas Negara:</span>
+          <span id="nominalBiaya" class="text-2xl sm:text-3xl font-black text-emerald-400 tracking-tight">Rp 0,-</span>
+        </div>
+        <p id="keteranganBiaya" class="text-xs text-slate-300 leading-relaxed">
+          Sesuai Aturan Resmi: Nikah di Balai Nikah KUA pada hari & jam kerja diselenggarakan <strong>GRATIS / TANPA BIAYA (Rp 0,-)</strong>.
+        </p>
+      </div>
+    </section>
+
+    <!-- 3. CHECKLIST SYARAT BERKAS CATIN -->
+    <section id="syarat" class="glass-card rounded-3xl p-6 sm:p-8 card-3d">
+      <div class="flex items-center space-x-3 mb-6">
+        <div class="w-11 h-11 bg-teal-500/20 border border-teal-500/40 rounded-2xl flex items-center justify-center text-xl">
+          📋
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-white">Simulasi Checklist Persyaratan Berkas</h3>
+          <p class="text-xs text-slate-400">Centang dokumen yang sudah siap untuk mengecek persentase kelengkapan</p>
+        </div>
+      </div>
+
+      <div class="space-y-3 text-xs sm:text-sm">
+        <label class="flex items-center p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 cursor-pointer transition-all">
+          <input type="checkbox" onchange="updateProgress()" class="w-4 h-4 accent-emerald-500 check-item">
+          <span class="ml-3 font-medium text-slate-200">Surat Pengantar Nikah dari Desa/Kelurahan (Model N1 - N4)</span>
+        </label>
+        <label class="flex items-center p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 cursor-pointer transition-all">
+          <input type="checkbox" onchange="updateProgress()" class="w-4 h-4 accent-emerald-500 check-item">
+          <span class="ml-3 font-medium text-slate-200">Fotokopi KTP, KK, & Akta Kelahiran (Calon Pengantin)</span>
+        </label>
+        <label class="flex items-center p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 cursor-pointer transition-all">
+          <input type="checkbox" onchange="updateProgress()" class="w-4 h-4 accent-emerald-500 check-item">
+          <span class="ml-3 font-medium text-slate-200">Fotokopi KTP Orang Tua / Wali Nikah & Saksi</span>
+        </label>
+        <label class="flex items-center p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 cursor-pointer transition-all">
+          <input type="checkbox" onchange="updateProgress()" class="w-4 h-4 accent-emerald-500 check-item">
+          <span class="ml-3 font-medium text-slate-200">Sertifikat Elsimil & Imunisasi TT Puskesmas (Catin Wanita)</span>
+        </label>
+        <label class="flex items-center p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 cursor-pointer transition-all">
+          <input type="checkbox" onchange="updateProgress()" class="w-4 h-4 accent-emerald-500 check-item">
+          <span class="ml-3 font-medium text-slate-200">Pas Foto Latar Biru (2x3: 4 lembar & 4x6: 2 lembar)</span>
+        </label>
+      </div>
+
+      <div class="mt-6 p-4 rounded-2xl bg-slate-950 border border-slate-800 space-y-2">
+        <div class="flex justify-between items-center text-xs font-bold text-emerald-300">
+          <span>Kelengkapan Berkas:</span>
+          <span id="statusBerkas">0% (0 / 5 Berkas Siap)</span>
+        </div>
+        <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
+          <div id="progressBar" class="bg-gradient-to-r from-emerald-500 to-teal-400 h-full w-0 transition-all duration-300"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. FORMULIR INPUT DATA CALON PENGANTIN (FORM CATIN ONLINE) -->
+    <section id="form-catin" class="glass-card rounded-3xl p-6 sm:p-8 card-3d">
+      <div class="flex items-center space-x-3 mb-6">
+        <div class="w-11 h-11 bg-emerald-500/20 border border-emerald-500/40 rounded-2xl flex items-center justify-center text-xl">
+          📝
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-white">Formulir Rilis Data Calon Pengantin</h3>
+          <p class="text-xs text-slate-400">Isi data ringkas untuk dikirim langsung ke WA Admin KUA Rogojampi</p>
+        </div>
+      </div>
+
+      <form onsubmit="kirimWaCatin(event)" class="space-y-4 text-xs sm:text-sm">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block font-bold text-slate-300 mb-1.5">Nama Lengkap Catin Pria *</label>
+            <input type="text" id="catinPria" required placeholder="Contoh: Ihsan Ariel" 
+                   class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald-400">
+          </div>
+          <div>
+            <label class="block font-bold text-slate-300 mb-1.5">Nama Lengkap Catin Wanita *</label>
+            <input type="text" id="catinWanita" required placeholder="Contoh: Annisa Putri" 
+                   class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald-400">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block font-bold text-slate-300 mb-1.5">Alamat / Desa Domisili *</label>
+            <input type="text" id="alamatDesa" required placeholder="Contoh: Gitik, Rogojampi" 
+                   class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald-400">
+          </div>
+          <div>
+            <label class="block font-bold text-slate-300 mb-1.5">Rencana Tanggal Nikah *</label>
+            <input type="date" id="tglNikah" required 
+                   class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald-400">
+          </div>
+        </div>
+
+        <div>
+          <label class="block font-bold text-slate-300 mb-1.5">Pilihan Lokasi Nikah *</label>
+          <select id="pilihanLokasi" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald-400">
+            <option value="Di Balai Nikah KUA Rogojampi (Gratis Rp 0)">Di Balai Nikah KUA Rogojampi (Gratis Rp 0)</option>
+            <option value="Di Luar KUA / Kediaman (Rp 600.000)">Di Luar KUA / Kediaman (Rp 600.000)</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-action w-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-black py-3.5 rounded-xl flex items-center justify-center space-x-2">
+          <span>📲 Kirim Form Data Catin ke WA Admin KUA</span>
+        </button>
+      </form>
+    </section>
+
+    <!-- 5. LOKASI GOOGLE MAPS & JADWAL PELAYANAN KANTOR -->
+    <section id="lokasi" class="glass-card rounded-3xl p-6 sm:p-8 card-3d">
+      <div class="flex items-center space-x-3 mb-6">
+        <div class="w-11 h-11 bg-emerald-500/20 border border-emerald-500/40 rounded-2xl flex items-center justify-center text-xl">
+          🏛️
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-white">Lokasi Google Maps & Jam Operasional KUA</h3>
+          <p class="text-xs text-slate-400">Kantor Urusan Agama Kecamatan Rogojampi, Kabupaten Banyuwangi</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <!-- Info Jam Operasional -->
+        <div class="space-y-4 sm:col-span-1 text-xs">
+          <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800 space-y-2">
+            <h4 class="font-bold text-emerald-400">🕒 Jam Pelayanan Kantor:</h4>
+            <ul class="space-y-1 text-slate-300">
+              <li><strong>Senin - Kamis:</strong> 07.30 - 16.00 WIB</li>
+              <li><strong>Jumat:</strong> 07.30 - 16.30 WIB</li>
+              <li><strong>Sabtu - Minggu:</strong> Libur (Pelayanan Akad Kediaman Tetap Melayani)</li>
+            </ul>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800 space-y-2">
+            <h4 class="font-bold text-emerald-400">📍 Alamat Kantor KUA:</h4>
+            <p class="text-slate-300 leading-relaxed">
+              Jl. Gladag - Rogojampi, Krajan, Gitik, Kec. Rogojampi, Kabupaten Banyuwangi, Jawa Timur 68462.
+            </p>
+          </div>
+        </div>
+
+        <!-- Google Maps Embed -->
+        <div class="sm:col-span-2 rounded-2xl overflow-hidden border border-slate-700 shadow-xl h-64 sm:h-auto min-h-[220px] relative">
+          <iframe 
+            title="Lokasi KUA Rogojampi"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15788.643202979247!2d114.288231!3d-8.303982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd151746971a82f%3A0xb3e1eb4d3eef73a7!2sKUA%20Rogojampi!5e0!3m2!1sid!2sid!4v1700000000000" 
+            class="w-full h-full border-0" 
+            allowfullscreen="" 
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="konsultasi" class="border-t border-slate-800 bg-slate-950 py-12 px-4 text-center text-xs text-slate-400 relative z-10">
+    <div class="max-w-3xl mx-auto space-y-5">
+      <div class="flex justify-center items-center space-x-3">
+        <!-- LOGO FOOTER EMBEDDED -->
+        <div class="w-8 h-8 flex-shrink-0">
+          <svg viewBox="0 0 200 200" class="w-full h-full">
+            <polygon points="100,10 185,60 185,150 100,195 15,150 15,60" fill="#047857" stroke="#facc15" stroke-width="6"/>
+            <polygon points="100,20 175,65 175,145 100,185 25,145 25,65" fill="#065f46" />
+            <polygon points="100,32 104,44 117,44 107,52 110,64 100,56 90,64 93,52 83,44 96,44" fill="#facc15"/>
+            <path d="M 70 95 L 100 80 L 130 95 L 130 115 L 100 100 L 70 115 Z" fill="#facc15" stroke="#ffffff" stroke-width="2"/>
+            <path d="M 100 80 L 100 100" stroke="#047857" stroke-width="3"/>
+            <path d="M 75 112 L 125 135 M 125 112 L 75 135" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+            <path d="M 45 130 A 55 55 0 0 1 50 65" fill="none" stroke="#ffffff" stroke-width="5" stroke-dasharray="4 4"/>
+            <path d="M 155 130 A 55 55 0 0 0 150 65" fill="none" stroke="#facc15" stroke-width="5"/>
+            <path d="M 45 150 Q 100 170 155 150 L 150 162 Q 100 180 50 162 Z" fill="#ffffff" stroke="#1e293b" stroke-width="1.5"/>
+            <text x="100" y="161" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="9" fill="#0f172a" text-anchor="middle">IKHLAS BERAMAL</text>
+          </svg>
+        </div>
+        <span class="text-sm font-black text-white tracking-wider">KUA KECAMATAN ROGOJAMPI</span>
+      </div>
+
+      <p class="text-slate-400 max-w-sm mx-auto text-[11px] leading-relaxed">
+        Layanan Informasi & Edukasi Pranikah Mandiri Terpadu.<br>
+        Kabupaten Banyuwangi, Jawa Timur.
+      </p>
+
+      <div>
+        <a href="https://wa.me/6281234567890?text=Halo%20Admin%20KUA%20Rogojampi,%20saya%20ingin%20konsultasi%20mengenai%20persyaratan%20nikah." 
+           target="_blank" 
+           class="btn-action inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-extrabold text-xs px-6 py-3.5 rounded-2xl">
+          <span>💬 Konsultasi Langsung via WhatsApp Official</span>
+        </a>
+      </div>
+
+      <p class="text-[10px] text-slate-600 pt-6">
+        &copy; 2026 PANDU NIKAH Rogojampi &bull; Program Sumbangsih PPL Mahasiswa
+      </p>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    function hitungBiaya(lokasi) {
+      const btnKua = document.getElementById('btnKua');
+      const btnBedhol = document.getElementById('btnBedhol');
+      const nominal = document.getElementById('nominalBiaya');
+      const ket = document.getElementById('keteranganBiaya');
+
+      if (lokasi === 'kua') {
+        btnKua.className = 'p-5 rounded-2xl bg-emerald-500/20 border-2 border-emerald-400 text-left transition-all';
+        btnBedhol.className = 'p-5 rounded-2xl bg-slate-900/80 border-2 border-slate-700 hover:border-emerald-500/50 text-left transition-all';
+        nominal.innerText = 'Rp 0,-';
+        ket.innerHTML = 'Sesuai Aturan Resmi: Nikah di Balai Nikah KUA pada hari & jam kerja diselenggarakan <strong>GRATIS / TANPA BIAYA (Rp 0,-)</strong>.';
+      } else {
+        btnBedhol.className = 'p-5 rounded-2xl bg-emerald-500/20 border-2 border-emerald-400 text-left transition-all';
+        btnKua.className = 'p-5 rounded-2xl bg-slate-900/80 border-2 border-slate-700 hover:border-emerald-500/50 text-left transition-all';
+        nominal.innerText = 'Rp 600.000,-';
+        ket.innerHTML = 'Nikah di luar KUA/Kediaman dikenakan tarif PNBP sebesar <strong>Rp 600.000,-</strong> yang disetor langsung ke Kas Negara via bank / kode billing.';
+      }
+    }
+
+    function updateProgress() {
+      const total = document.querySelectorAll('.check-item').length;
+      const checked = document.querySelectorAll('.check-item:checked').length;
+      const percentage = Math.round((checked / total) * 100);
+
+      document.getElementById('statusBerkas').innerText = `${percentage}% (${checked} / ${total} Berkas Siap)`;
+      document.getElementById('progressBar').style.width = `${percentage}%`;
+    }
+
+    function kirimWaCatin(event) {
+      event.preventDefault();
+      const pria = document.getElementById('catinPria').value;
+      const wanita = document.getElementById('catinWanita').value;
+      const alamat = document.getElementById('alamatDesa').value;
+      const tgl = document.getElementById('tglNikah').value;
+      const lokasi = document.getElementById('pilihanLokasi').value;
+
+      const pesan = `Halo%20Admin%20KUA%20Rogojampi,%20saya%20ingin%20mendaftarkan%20data%20Catin:%0A%0A- %20Catin%20Pria:%20${encodeURIComponent(pria)}%0A- %20Catin%20Wanita:%20${encodeURIComponent(wanita)}%0A- %20Alamat/Desa:%20${encodeURIComponent(alamat)}%0A- %20Rencana%20Nikah:%20${encodeURIComponent(tgl)}%0A- %20Lokasi:%20${encodeURIComponent(lokasi)}%0A%0AMohon%20petunjuk%20proses%20selanjutnya.%20Terima%20kasih!`;
+
+      window.open(`https://wa.me/6281234567890?text=${pesan}`, '_blank');
+    }
+  </script>
+</body>
+</html>
